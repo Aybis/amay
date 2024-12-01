@@ -15,10 +15,12 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@apollo/client": "^3.11.10",
     "@expo/vector-icons": "^14.0.2",
     "@react-navigation/bottom-tabs": "^7.0.0",
     "@react-navigation/native": "^7.0.0",
     "autoprefixer": "^10.4.20",
+    "axios": "^1.7.8",
     "expo": "~52.0.11",
     "expo-blur": "~14.0.1",
     "expo-constants": "~17.0.3",
@@ -31,6 +33,9 @@
     "expo-symbols": "~0.2.0",
     "expo-system-ui": "~4.0.4",
     "expo-web-browser": "~14.0.1",
+    "framer-motion": "^11.12.0",
+    "graphql": "^16.9.0",
+    "heroicons": "^2.2.0",
     "nativewind": "^4.1.23",
     "postcss": "^8.4.49",
     "react": "18.3.1",
@@ -42,7 +47,9 @@
     "react-native-screens": "~4.1.0",
     "react-native-web": "~0.19.13",
     "react-native-webview": "13.12.2",
-    "tailwindcss": "^3.4.15"
+    "react-query": "^3.39.3",
+    "tailwindcss": "^3.4.15",
+    "zustand": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

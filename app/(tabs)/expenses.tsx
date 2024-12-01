@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { View, Text, Button, TextInput, FlatList, TouchableOpacity } from 'react-native';
-import { v4 as uuidv4 } from 'uuid';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { Colors } from '@/constants/Colors';
 import ExpenseChart from '@/components/ExpenseChart';
 
 const dummyData = [
   {
-    id: uuidv4(),
+    id: new Date().toISOString(),
     title: 'Groceries',
     amount: 50,
     category: 'Food',
   },
   {
-    id: uuidv4(),
+    id: new Date().toISOString(),
     title: 'Electricity Bill',
     amount: 100,
     category: 'Utilities',
@@ -31,7 +30,7 @@ export default function ExpensesScreen() {
     setExpenses([
       ...expenses,
       {
-        id: uuidv4(),
+        id: new Date().toISOString(),
         title,
         amount: parseFloat(amount),
         category,

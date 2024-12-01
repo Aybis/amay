@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { View, Text, Button, TextInput, FlatList, TouchableOpacity } from 'react-native';
-import { v4 as uuidv4 } from 'uuid';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { Colors } from '@/constants/Colors';
 
 const dummyData = [
   {
-    id: uuidv4(),
+    id: new Date().toISOString(),
     name: 'Milk',
     quantity: 2,
     category: 'Groceries',
@@ -14,7 +13,7 @@ const dummyData = [
     lowStockThreshold: 1,
   },
   {
-    id: uuidv4(),
+    id: new Date().toISOString(),
     name: 'Kazayn’s Toy',
     quantity: 5,
     category: 'Toys',
@@ -37,7 +36,7 @@ export default function InventoryScreen() {
     setItems([
       ...items,
       {
-        id: uuidv4(),
+        id: new Date().toISOString(),
         name,
         quantity,
         category,

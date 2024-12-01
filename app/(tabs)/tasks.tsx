@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { View, Text, Button, TextInput, FlatList, TouchableOpacity } from 'react-native';
-import { v4 as uuidv4 } from 'uuid';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { Colors } from '@/constants/Colors';
 
 const dummyData = [
   {
-    id: uuidv4(),
+    id: new Date().toISOString(),
     title: 'Clean the room',
     priority: 'high',
     completed: false,
     points: 10,
   },
   {
-    id: uuidv4(),
+    id: new Date().toISOString(),
     title: 'Do the dishes',
     priority: 'medium',
     completed: true,
@@ -32,7 +31,7 @@ export default function TasksScreen() {
     setTasks([
       ...tasks,
       {
-        id: uuidv4(),
+        id: new Date().toISOString(),
         title,
         priority,
         completed: false,

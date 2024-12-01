@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import { View, Text, Button, TextInput, FlatList, TouchableOpacity } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { v4 as uuidv4 } from 'uuid';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { Colors } from '@/constants/Colors';
 
 const dummyData = [
   {
-    id: uuidv4(),
+    id: new Date().toISOString(),
     title: 'Kazayn’s Birthday',
     date: new Date(),
     color: '#FF5733',
     recurring: 'yearly',
   },
   {
-    id: uuidv4(),
+    id: new Date().toISOString(),
     title: 'Family Trip',
     date: new Date(),
     color: '#33FF57',
@@ -35,7 +34,7 @@ export default function CalendarScreen() {
     setEvents([
       ...events,
       {
-        id: uuidv4(),
+        id: new Date().toISOString(),
         title,
         date,
         color,
